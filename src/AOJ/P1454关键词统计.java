@@ -9,7 +9,16 @@ public class P1454¹Ø¼ü´ÊÍ³¼Æ {
 	static PrintWriter cout = new PrintWriter(System.out);
 
 	public static void main(String[] args) {
-		
+		while (cin.hasNext()) {
+            int n = cin.nextInt();
+            int m = cin.nextInt();
+            for (int i = 0; i <= n; i++) {
+                int j = n - i;
+                if (4 * i + 2 * j == m) {
+                    System.out.println(i + " " + j);
+                }
+            }
+        }
 		cin.close();
 		cout.close();
 	}
