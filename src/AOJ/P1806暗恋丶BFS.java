@@ -2,7 +2,7 @@ package AOJ;
 
 import java.util.Scanner;
 
-public class P°µÁµØ¼BFS {
+public class P1806°µÁµØ¼BFS {
 
 	static int s[][] = new int[200][200];
 

@@ -3,7 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P星际交流丶排列问题 {
+public class P1805星际交流丶排列问题 {
 	/*
 	 * 规律：从右边开始向左扫描，找到前一个比后一个小的位置i，假设该位置的数字用a表示，然后从这个位置的下一个位置开始向右边找，
 	 * 找到比a大的且与a接近的数，设该数用b表示，位置用j表示。交换a，b，然后将第i+1到最后一个数按小到的顺序排序，即得到一个新的排列。
