@@ -1,25 +1,29 @@
 package AOJ;
 
-import java.io.PrintWriter;
 import java.util.Scanner;
-
+ 
 public class P1454¹Ø¼ü´ÊÍ³¼Æ {
-
-	static Scanner cin = new Scanner(System.in);
-	static PrintWriter cout = new PrintWriter(System.out);
-
-	public static void main(String[] args) {
-		while (cin.hasNext()) {
-            int n = cin.nextInt();
-            int m = cin.nextInt();
-            for (int i = 0; i <= n; i++) {
-                int j = n - i;
-                if (4 * i + 2 * j == m) {
-                    System.out.println(i + " " + j);
-                }
-            }
+ 
+    static Scanner cin = new Scanner(System.in);
+ 
+    public static void main(String[] args) {
+        String str = cin.nextLine();
+        int N = cin.nextInt();
+        String a = cin.nextLine();
+        String[] word = new String[N];
+        for (int i = 0; i < word.length; i++) {
+            word[i] = cin.nextLine();
         }
-		cin.close();
-		cout.close();
-	}
+        String[] s = str.split("\\.\\s*|\\s+|\\W+\\s*");
+        int ans = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < s.length; j++) {
+                if (word[i].toLowerCase().equals(s[j].toLowerCase()))
+                    ans++;
+            }
+            System.out.println(ans);
+            ans = 0;
+        }
+        cin.close();
+    }
 }
