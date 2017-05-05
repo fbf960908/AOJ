@@ -11,14 +11,7 @@ public class Demo {
 	static PrintWriter cout = new PrintWriter(System.out);
 
 	public static void main(String[] args) {
-		try {
-			   double x = 64.0;
-			   double y = 0.0;
-			   System.out.println(x % y);
-			  } catch (Exception e) {
-			   System.out.println("Exception");
-			  }
-
+		
 	}
 }
 
