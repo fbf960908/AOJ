@@ -11,17 +11,14 @@ public class Demo {
 	static PrintWriter cout = new PrintWriter(System.out);
 
 	public static void main(String[] args) {
-		while (cin.hasNext()) {
-			String str = cin.nextLine();
-			String s = cin.nextLine();
-			Pattern p = Pattern.compile(str.toLowerCase());
-			Matcher m = p.matcher(s.toLowerCase());
-			int i = 0;
-			while (m.find()) {
-				i++;
-			}
-			System.out.println(i);
-		}
+		try {
+			   double x = 64.0;
+			   double y = 0.0;
+			   System.out.println(x % y);
+			  } catch (Exception e) {
+			   System.out.println("Exception");
+			  }
+
 	}
 }
 
