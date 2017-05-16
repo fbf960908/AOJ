@@ -11,8 +11,7 @@ public class Demo {
 	static PrintWriter cout = new PrintWriter(System.out);
 
 	public static void main(String[] args) {
-		String str = "1234";
-		number.tongji(str);
+		
 	}
 }
 
