@@ -6,7 +6,7 @@ public class P1806°µÁµØ¼BFS {
 
 	static int s[][] = new int[200][200];
 
-	static int ispure(int x1, int y1, int w) {//ÅĞ¶ÏÕı·½ĞÎ
+	static int ispure(int x1, int y1, int w) {// ÅĞ¶ÏÕı·½ĞÎ
 		int pure = s[x1][y1];
 		for (int i = 0; i < w; i++) {
 			for (int j = 0; j < w; j++) {
@@ -19,7 +19,7 @@ public class P1806°µÁµØ¼BFS {
 
 	public static void main(String[] args) {
 
-		int r, c, m, w, max = 0;
+		int r, c, m, max = 0;
 		Scanner cin = new Scanner(System.in);
 		r = cin.nextInt();
 		c = cin.nextInt();
@@ -34,7 +34,7 @@ public class P1806°µÁµØ¼BFS {
 		}
 		for (int i = 0; i < r; i++) {
 			for (int j = 0; j < c; j++) {
-				for (w = max + 1; w < m; w++) {
+				for (int w = max + 1; w < m; w++) {
 					if (i + w <= r && j + w <= c) {
 						if (ispure(i, j, w) != 0)
 							max = w;
