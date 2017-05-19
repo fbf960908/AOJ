@@ -11,7 +11,11 @@ public class Demo {
 	static PrintWriter cout = new PrintWriter(System.out);
 
 	public static void main(String[] args) {
-		
+		char a = 'X';
+		char b = 'y';
+		System.out.println((int)a);
+		System.out.println((int)b);
+		System.out.println((char)(a+33));
 	}
 }
 
@@ -32,5 +36,23 @@ class number {
 
 	private static int gcd(int a, int b) {
 		return b > 0 ? gcd(b, a % b) : a;
+	}
+
+	private static int[][] sort(int[][] ss) {
+		int temp = 0;
+		for (int i = ss.length - 1; i > 0; --i) {
+			for (int j = 0; j < i; ++j) {
+				if (ss[j + 1][0] > ss[j][0]) {
+					temp = ss[j][0];
+					ss[j][0] = ss[j + 1][0];
+					ss[j + 1][0] = temp;
+
+					temp = ss[j][1];
+					ss[j][1] = ss[j + 1][1];
+					ss[j + 1][1] = temp;
+				}
+			}
+		}
+		return ss;
 	}
 }
