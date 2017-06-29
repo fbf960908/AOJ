@@ -10,14 +10,11 @@ public class Demo {
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
 
-	public static void main(String[] args) {
-		char a = 'X';
-		char b = 'y';
-		System.out.println((int)a);
-		System.out.println((int)b);
-		System.out.println((char)(a+33));
+	public static void main(String[] args) {	
+		
 	}
 }
+
 
 class number {
 	public static void tongji(String str) {
