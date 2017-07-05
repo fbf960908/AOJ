@@ -17,12 +17,12 @@ public class P1174Í¼Êé¹ÝÕ¼×ùforÌ°ÐÄ {
 			student[i].set(cin.nextInt(), cin.nextInt());
 		}
 		Arrays.sort(student);
-		System.out.println(greedy_activity_selector(student, N));
+		System.out.println(select(student, N));
 		cout.close();
 		cin.close();
 	}
 
-	static int greedy_activity_selector(Student[] student, int n) {
+	static int select(Student[] student, int n) {
 		int num = 1, i = 1;
 		for (int j = 2; j < n; j++) {
 			if (student[j].start >= student[i].end) {
