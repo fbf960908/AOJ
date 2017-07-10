@@ -7,39 +7,27 @@ public class Main {
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
-	static int father[], total;
 
 	public static void main(String args[]) {
 		while (cin.hasNext()) {
 			int n = cin.nextInt();
 			int m = cin.nextInt();
-			if (n == 0 && m == 0)
-				break;
-			init(n);
-			for (int i = 0; i < m; i++) {
-				union(cin.nextInt(), cin.nextInt());
+			int [] w =new int [n+1];
+			int [] p = new int [n+1];
+			for (int i = 1; i <= n; i++) {
+				w[i] = cin.nextInt();
 			}
-			System.out.println(--total);
+			for (int i = 1; i <= n; i++) {
+				p[i] = cin.nextInt();
+			}
+			int [] dp = new int [m+1];
+			dp[0] = 0;
+			for (int i = 1; i < n; i++) {
+				for (int j = m; j >=w[i]; j--) {
+					dp[j]=Math.max(dp[j],dp[j-w[i]]+p[i]);
+				}
+			}
+			System.out.println(dp[m]);
 		}
-	}
-
-	private static void union(int x, int y) {
-		int p = find(x);
-		int q = find(y);
-		if (p == q)
-			return;
-		father[p] = q;
-		total--;
-	}
-
-	private static int find(int x) {
-		return x == father[x] ? x : (father[x] = find(father[x]));
-	}
-
-	private static void init(int n) {
-		total = n;
-		father = new int[n + 1];
-		for (int i = 0; i <= n; i++)
-			father[i] = i;
 	}
 }
