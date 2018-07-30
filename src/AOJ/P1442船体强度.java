@@ -3,7 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P1442船体强度 {
+public class P1442鑸逛綋寮哄害 {
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
@@ -14,16 +14,17 @@ public class P1442船体强度 {
 			int T = cin.nextInt();
 			int ans = 0;
 			while(T-->0){
-				if(N<=1)
+				if(N<=1) {
 					break;
+				}
 				N /= 2;
 				ans++;
 			}
 			if(N>1){
 				System.out.println("Impossible");
-			}
-			else
+			} else {
 				System.out.println(ans);
+			}
 		}
 		cin.close();
 		cout.close();

@@ -3,40 +3,44 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P1439Mì³²¨ÄÇÆõÊýÁÐ¾ØÕó¿ìËÙÃÝ {
+public class P1439Mæ–æ³¢é‚£å¥‘æ•°åˆ—çŸ©é˜µå¿«é€Ÿå¹‚ {
 	/*
 	 * F(n) = a^f(n-1)*b^f(n)
 	 */
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
-	static final long[][] unit = { { 1, 1 }, { 1, 0 } };// µ¥Î»¾ØÕó
+	static final long[][] unit = { { 1, 1 }, { 1, 0 } };// ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½
 	static final long le9 = 1000000007;
 
-	public static long mul(long a, long b, long c) {// ¿ìËÙ³Ë·¨
+	public static long mul(long a, long b, long c) {// ï¿½ï¿½ï¿½Ù³Ë·ï¿½
 		long ans = 0, tmp = a % c;
 		while (b != 0) {
-			if ((b & 1) == 1)
-				if ((ans += tmp) >= c)
+			if ((b & 1) == 1) {
+				if ((ans += tmp) >= c) {
 					ans -= c;
-			if ((tmp <<= 1) >= c)
+				}
+			}
+			if ((tmp <<= 1) >= c) {
 				tmp -= c;
+			}
 			b >>= 1;
 		}
 		return ans;
 	}
 
-	public static long mul_mod(long a, long b, long c) {// ¿ìËÙÃÝÈ¡Ä£
+	public static long mul_mod(long a, long b, long c) {// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡Ä£
 		long ret = 1 % c;
 		while (b != 0) {
-			if ((b & 1) == 1)
+			if ((b & 1) == 1) {
 				ret = mul(ret, a, c);
+			}
 			a = mul(a, a, c);
 			b >>= 1;
 		}
 		return ret;
 	}
 
-	public static long[][] mul(long[][] a, long[][] b) {// ¾ØÕó³Ë·¨
+	public static long[][] mul(long[][] a, long[][] b) {// ï¿½ï¿½ï¿½ï¿½Ë·ï¿½
 		long[][] arr = new long[a.length][b[0].length];
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < b[0].length; j++) {
@@ -48,19 +52,21 @@ public class P1439Mì³²¨ÄÇÆõÊýÁÐ¾ØÕó¿ìËÙÃÝ {
 		return arr;
 	}
 
-	public static long[][] mul_Power(long[][] a, long n) {// ¾ØÕó¿ìËÙÃÝ
+	public static long[][] mul_Power(long[][] a, long n) {// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		long[][] res = new long[a.length][a[0].length];
 		for (int i = 0; i < res.length; i++) {
 			for (int j = 0; j < res[0].length; j++) {
-				if (i == j)
+				if (i == j) {
 					res[i][j] = 1;
-				else
+				} else {
 					res[i][j] = 0;
+				}
 			}
 		}
 		while (n != 0) {
-			if ((n & 1) == 1)
+			if ((n & 1) == 1) {
 				res = mul(res, a);
+			}
 			n >>= 1;
 			a = mul(a, a);
 		}

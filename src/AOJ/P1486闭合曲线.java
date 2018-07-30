@@ -3,7 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P1486±ÕºÏÇúÏß {
+public class P1486é—­åˆæ›²çº¿{
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);

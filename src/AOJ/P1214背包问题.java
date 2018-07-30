@@ -3,7 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P1214背包问题 {
+public class P1214鑳屽寘闂{
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
@@ -24,8 +24,9 @@ public class P1214背包问题 {
 			for (int j = m; j >= 1; j--) {
 				if (w[i] <= j) {
 					dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - w[i]] + p[i]);
-				} else
+				} else {
 					dp[i][j] = dp[i - 1][j];
+				}
 			}
 		}
 		System.out.println(dp[n][m]);

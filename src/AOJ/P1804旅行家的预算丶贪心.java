@@ -6,11 +6,7 @@ class node {
 	double x, value;
 }
 
-public class P1804ÂÃĞĞ¼ÒµÄÔ¤ËãØ¼Ì°ĞÄ {
-	/*
-	 * Èç¹ûÔÚ¼ÓÂúÓÍµÄÇé¿öÏÂ£¬¿ÉÒÔµ½´ïµÄ³ÇÊĞÓĞÓÍ¼Û¸üµÍµÄ£¬¾ÍÏÈÈ¥ÄÇÀï£¬ÓÍ¹»£¬Ö±½ÓÈ¥£¬²»¹»£¬¼Óµ½ÕıºÃ¡£
-	 * ¿ÉÒÔµ½´ïµÄ³ÇÊĞÃ»ÓĞÓÍ¼Û¸üµÍµÄ£¬¾ÍÔÚµ±Ç°³ÇÊĞ¼ÓÂúÓÍ£¬È¥×îÔ¶µÄ³ÇÊĞ¡£
-	 */
+public class P1804æ—…è¡Œå®¶çš„é¢„ç®—ä¸¶è´ªå¿ƒ {
 
 	static Scanner cin = new Scanner(System.in);
 
@@ -29,7 +25,7 @@ public class P1804ÂÃĞĞ¼ÒµÄÔ¤ËãØ¼Ì°ĞÄ {
 			for (int i = 0; i < n + 2; i++) {
 				station[i] = new node();
 			}
-			// ¹¹ÔìÒ»¸öĞòÁĞ£¬station[0]ÎªÆğµã£¬¶øn+1ÎªÖÕµã
+			// ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ğ£ï¿½station[0]Îªï¿½ï¿½ã£¬ï¿½ï¿½n+1Îªï¿½Õµï¿½
 			station[0].x = 0;
 			station[0].value = P;
 			for (int i = 1; i <= n; i++) {
@@ -44,36 +40,39 @@ public class P1804ÂÃĞĞ¼ÒµÄÔ¤ËãØ¼Ì°ĞÄ {
 			int min;
 			while (true) {
 				min = st;
-				if (st >= n + 1)// ´ïµ½n+1Ìø³öÑ­»·
+				if (st >= n + 1) {
 					break;
-				if (station[st + 1].x - station[st].x <= max) { // Èç¹ûÏÂÒ»¸öµã¿ÉÒÔ´ïµ½
+				}
+				if (station[st + 1].x - station[st].x <= max) { // ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ïµ½
 					min = st + 1;
 				}
-				if (min == st) {// ´ï²»µ½ÖÕµãÑ­»·½áÊø
+				if (min == st) {// ï¿½ï²»ï¿½ï¿½ï¿½Õµï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					break;
 				}
 				for (int i = st + 1; i <= n + 1; i++) {
 					if (station[i].x - station[st].x > max) {
 						break;
 					} else {
-						if (station[i].value < station[min].value)
+						if (station[i].value < station[min].value) {
 							min = i;
+						}
 					}
 				}
-				if (station[min].value < station[st].value) { // Èç¹ûÏÂÒ»µãµÄÓÍ¼Û±ÈÏÖÔÚÓÍ¼ÛµÍ£¬ÄÇÃ´Ö»ÂòÖ»ÄÜµ½ÏÂÒ»¸öÓÍÕ¾µÄÓÍ
+				if (station[min].value < station[st].value) { // ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Í¼Û±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ÛµÍ£ï¿½ï¿½ï¿½Ã´Ö»ï¿½ï¿½Ö»ï¿½Üµï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½ï¿½
 					cost += ((station[min].x - station[st].x) / D2 - least) * station[st].value;
 					least = (station[min].x - station[st].x) / D2 - least;
-				} else { // ¼ÓÂú
+				} else { // ï¿½ï¿½ï¿½ï¿½
 					cost += (C - least) * station[st].value;
 					least = C;
 				}
 				least -= (station[min].x - station[st].x) / D2;
 				st = min;
 			}
-			if (st >= n + 1)
+			if (st >= n + 1) {
 				System.out.printf("%.2f\n", cost);
-			else
+			} else {
 				System.out.println("No Solution");
+			}
 		}
 	}
 }

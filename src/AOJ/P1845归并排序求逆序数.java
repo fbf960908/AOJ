@@ -3,7 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P1845¹é²¢ÅÅĞòÇóÄæĞòÊı {
+public class P1845å½’å¹¶æ’åºæ±‚é€†åºæ•° {
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
@@ -24,7 +24,7 @@ public class P1845¹é²¢ÅÅĞòÇóÄæĞòÊı {
 	public static long sort(int[] array, int p, int r) {
 		if (p < r) {
 			int q = p + (r - p) / 2;
-			long len1 = sort(array, p, q); // ×ÓÊı×éÅÅĞò
+			long len1 = sort(array, p, q); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			long len2 = sort(array, q + 1, r);
 			long count = merge(array, p, q, r);
 
@@ -56,7 +56,7 @@ public class P1845¹é²¢ÅÅĞòÇóÄæĞòÊı {
 				array[i] = array1[index1++];
 			} else {
 				array[i] = array2[index2++];
-				count += n1 - index1;// Êı×éÓĞĞò£¬ËùÒÔÊ£ÏÂ¼¸¸ökey¾ÍÓĞÒ»¸ökey±Èarray2[index2]´óÒ²¾ÍÊÇÓĞ¼¸¸öÄæĞò¶Ô¡£
+				count += n1 - index1;// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê£ï¿½Â¼ï¿½ï¿½ï¿½keyï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½keyï¿½ï¿½array2[index2]ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½
 			}
 		}
 		return count;

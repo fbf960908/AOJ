@@ -2,7 +2,7 @@ package AOJ;
 
 import java.util.Scanner;
 
-public class ²¢²é¼¯ {
+public class å¹¶æŸ¥é›† {
 
 	static Scanner cin = new Scanner(System.in);
 	static int[] father = new int[1000];
@@ -38,8 +38,9 @@ public class ²¢²é¼¯ {
 	static void union(int x, int y) {
 		x = find(x);
 		y = find(y);
-		if (x == y)
+		if (x == y) {
 			return;
+		}
 		if (rank[x] > rank[y]) {
 			father[y] = x;
 		} else {

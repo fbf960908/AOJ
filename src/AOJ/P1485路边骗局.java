@@ -3,7 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P1485Â·±ßÆ­¾Ö {
+public class P1485è·¯è¾¹éª—å±€{
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
@@ -16,10 +16,11 @@ public class P1485Â·±ßÆ­¾Ö {
 	            int x = cin.nextInt();
 	            sum ^= x;
 	        }
-	        if(sum>0)
-	        	System.out.println("Yes");
-	        else
-	        	System.out.println("No");
+	        if(sum>0) {
+				System.out.println("Yes");
+			} else {
+				System.out.println("No");
+			}
 		}
 		cin.close();
 		cout.close();

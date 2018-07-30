@@ -3,7 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
  
-public class P1802新生舞会 {
+public class P1802鏂扮敓鑸炰細 {
  
     static Scanner cin = new Scanner(System.in);
     static PrintWriter cout = new PrintWriter(System.out);
@@ -20,19 +20,21 @@ public class P1802新生舞会 {
             String a = cin.next();
             String b = cin.next();
             ;
-            if (findsex(ss, a).equals(findsex(ss, b)))
-                System.out.println("N");
-            else
-                System.out.println("Y");
+            if (findsex(ss, a).equals(findsex(ss, b))) {
+				System.out.println("N");
+			} else {
+				System.out.println("Y");
+			}
         }
         cin.close();
         cout.close();
     }
  
     private static String findsex(Student[] ss, String a) {
-        for (int i = 0; i < ss.length; i++) {
-            if (ss[i].getName().equals(a) || ss[i].getNum().equals(a))
-                return ss[i].getSex();
+        for (Student element : ss) {
+            if (element.getName().equals(a) || element.getNum().equals(a)) {
+				return element.getSex();
+			}
         }
         return null;
     }

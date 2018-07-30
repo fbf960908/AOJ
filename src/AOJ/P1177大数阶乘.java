@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-public class P1177´óÊý½×³Ë {
+public class P1177å¤§æ•°é˜¶ä¹˜ {
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
 

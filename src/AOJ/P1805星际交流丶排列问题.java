@@ -3,13 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P1805ÐÇ¼Ê½»Á÷Ø¼ÅÅÁÐÎÊÌâ {
-	/*
-	 * ¹æÂÉ£º´ÓÓÒ±ß¿ªÊ¼Ïò×óÉ¨Ãè£¬ÕÒµ½Ç°Ò»¸ö±ÈºóÒ»¸öÐ¡µÄÎ»ÖÃi£¬¼ÙÉè¸ÃÎ»ÖÃµÄÊý×ÖÓÃa±íÊ¾£¬È»ºó´ÓÕâ¸öÎ»ÖÃµÄÏÂÒ»¸öÎ»ÖÃ¿ªÊ¼ÏòÓÒ±ßÕÒ£¬
-	 * ÕÒµ½±Èa´óµÄÇÒÓëa½Ó½üµÄÊý£¬Éè¸ÃÊýÓÃb±íÊ¾£¬Î»ÖÃÓÃj±íÊ¾¡£½»»»a£¬b£¬È»ºó½«µÚi+1µ½×îºóÒ»¸öÊý°´Ð¡µ½µÄË³ÐòÅÅÐò£¬¼´µÃµ½Ò»¸öÐÂµÄÅÅÁÐ¡£
-	 * Èç12354µ½12435£¬a=3£¬i=3£¬b=4£¬j=5£¬×÷ÈçÏÂ±ä»¯£º ÕÒÎ»ÖÃ£¬»»Î»ÖÃ ÅÅÐò 12354 ¡ú 12453 ¡ú 12435
-	 * ¸ù¾Ý·ÖÎö£¬²ÉÓÃÄæÐòÊäÈë¸üºÃ´¦ÀíÁË£¡¼ÓÉÏmÆäÊµ¾ÍÊÇÇóÕâ¸öÅÅÁÐÎªµÚÒ»¸ö£¬ÇóµÚm¸öÅÅÁÐ£¡
-	 */
+public class P1805æ˜Ÿé™…äº¤æµä¸¶æŽ’åˆ—é—®é¢˜ {
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
 
@@ -23,12 +17,15 @@ public class P1805ÐÇ¼Ê½»Á÷Ø¼ÅÅÁÐÎÊÌâ {
 		a[n] = Integer.MAX_VALUE;
 		while (m-- > 0) {
 			int j = 1;
-			while (a[j] > a[j - 1])
+			while (a[j] > a[j - 1]) {
 				j++;
+			}
 			int t = n;
-			for (int k = 0; k < j; k++)
-				if ((a[k] < a[t]) && (a[k] > a[j]))
+			for (int k = 0; k < j; k++) {
+				if ((a[k] < a[t]) && (a[k] > a[j])) {
 					t = k;
+				}
+			}
 			int temp = a[t];
 			a[t] = a[j];
 			a[j] = temp;

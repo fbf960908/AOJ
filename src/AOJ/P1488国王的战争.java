@@ -3,7 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P1488¹úÍõµÄÕ½Õù {
+public class P1488å›½ç‹çš„æˆ˜äº‰ {
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
@@ -22,21 +22,25 @@ public class P1488¹úÍõµÄÕ½Õù {
 				if (s[i][j] == 1) {
 					for (int j2 = i - 1; j2 <= i + 1; j2++) {
 						for (int l = j - 1; l <= j + 1; l++) {
-							if (s[j2][l] == 1 && j2 != i && l != j)
+							if (s[j2][l] == 1 && j2 != i && l != j) {
 								flag++;
+							}
 						}
 					}
 				}
-				if (flag != 0)
+				if (flag != 0) {
 					break;
+				}
 			}
-			if (flag != 0)
+			if (flag != 0) {
 				break;
+			}
 		}
-		if (flag == 0)
+		if (flag == 0) {
 			System.out.println("NO");
-		else
+		} else {
 			System.out.println("YES");
+		}
 		cin.close();
 		cout.close();
 	}

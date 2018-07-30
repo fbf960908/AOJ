@@ -2,16 +2,17 @@ package AOJ;
 
 import java.util.Scanner;
 
-public class P1806°µÁµØ¼BFS {
+public class P1806æš—æ‹ä¸¶BFS {
 
 	static int s[][] = new int[200][200];
 
-	static int ispure(int x1, int y1, int w) {// ÅĞ¶ÏÕı·½ĞÎ
+	static int ispure(int x1, int y1, int w) {// ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		int pure = s[x1][y1];
 		for (int i = 0; i < w; i++) {
 			for (int j = 0; j < w; j++) {
-				if (s[x1 + i][y1 + j] != pure)
+				if (s[x1 + i][y1 + j] != pure) {
 					return 0;
+				}
 			}
 		}
 		return 1;
@@ -23,10 +24,11 @@ public class P1806°µÁµØ¼BFS {
 		Scanner cin = new Scanner(System.in);
 		r = cin.nextInt();
 		c = cin.nextInt();
-		if (r > c)
+		if (r > c) {
 			m = r;
-		else
+		} else {
 			m = c;
+		}
 		for (int i = 0; i < r; i++) {
 			for (int j = 0; j < c; j++) {
 				s[i][j] = cin.nextInt();
@@ -36,10 +38,12 @@ public class P1806°µÁµØ¼BFS {
 			for (int j = 0; j < c; j++) {
 				for (int w = max + 1; w < m; w++) {
 					if (i + w <= r && j + w <= c) {
-						if (ispure(i, j, w) != 0)
+						if (ispure(i, j, w) != 0) {
 							max = w;
-					} else
+						}
+					} else {
 						break;
+					}
 				}
 			}
 		}

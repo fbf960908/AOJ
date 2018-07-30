@@ -15,7 +15,7 @@ class gong implements Comparable<gong> {
 	}
 }
 
-public class P1429箭无虚发 {
+public class P1429绠棤铏氬彂 {
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
@@ -35,8 +35,8 @@ public class P1429箭无虚发 {
 			int t = cin.nextInt();
 
 			int sum = 0;
-			for (int i = 0; i < ss.length; i++) {
-				sum += ss[i].zhong;
+			for (gong element : ss) {
+				sum += element.zhong;
 			}
 			if (sum > t) {
 				System.out.println("Oh,my god!");
@@ -45,12 +45,13 @@ public class P1429箭无虚发 {
 
 			Arrays.sort(ss);
 			int ans = 0;
-			for (int i = 0; i < ss.length; i++) {
-				if (sum + ss[i].you <= t) {
-					sum += ss[i].you;
+			for (gong element : ss) {
+				if (sum + element.you <= t) {
+					sum += element.you;
 					ans++;
-				} else
+				} else {
 					break;
+				}
 			}
 			System.out.println(ans);
 		}

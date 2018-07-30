@@ -3,7 +3,7 @@ package AOJ;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class P1428ÕóÇ°µÚÒ»¹¦ {
+public class P1428é˜µå‰ç¬¬ä¸€åŠŸ {
 
 	static Scanner cin = new Scanner(System.in);
 
@@ -19,10 +19,12 @@ public class P1428ÕóÇ°µÚÒ»¹¦ {
 			int k = cin.nextInt();
 			int j = 0, i;
 			for (i = ss.length - 1; i > 0; i--) {
-				if (ss[i] != ss[i - 1])
+				if (ss[i] != ss[i - 1]) {
 					j++;
-				if (j == k)
+				}
+				if (j == k) {
 					break;
+				}
 			}
 			System.out.println(ss[i]);
 

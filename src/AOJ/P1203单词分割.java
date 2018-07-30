@@ -3,7 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P1203单词分割 {
+public class P1203鍗曡瘝鍒嗗壊{
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
@@ -11,8 +11,9 @@ public class P1203单词分割 {
 	public static void main(String[] args) {
 		String str = cin.nextLine();
 		String arr[] = str.split("\\.\\s*|\\s+|\\W+\\s*");
-		for (int i = 0; i < arr.length; i++)
-			System.out.println(arr[i]);
+		for (String element : arr) {
+			System.out.println(element);
+		}
 		cin.close();
 		cout.close();
 	}

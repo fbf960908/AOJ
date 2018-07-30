@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class P1323结义兄弟 {
+public class P1323缁撲箟鍏勫紵 {
 	static class Person implements Comparable<Person> {
 		String name;
 		int year, month, day;
@@ -12,10 +12,12 @@ public class P1323结义兄弟 {
 		@Override
 		public int compareTo(Person that) {
 			Person pa = this, pb = that;
-			if (pa.year != pb.year)
+			if (pa.year != pb.year) {
 				return pa.year - pb.year;
-			if (pa.month != pb.month)
+			}
+			if (pa.month != pb.month) {
 				return pa.month - pb.month;
+			}
 			return pa.day - pb.day;
 		}
 	}
@@ -33,8 +35,9 @@ public class P1323结义兄弟 {
 			persons[i].day = cin.nextInt();
 		}
 		Arrays.sort(persons);
-		for (Person person : persons)
+		for (Person person : persons) {
 			cout.println(person.name);
+		}
 		cout.close();
 		cin.close();
 	}

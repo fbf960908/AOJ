@@ -3,7 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P1491一道简单的几何变换 {
+public class P1491涓�閬撶畝鍗曠殑鍑犱綍鍙樻崲 {
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);

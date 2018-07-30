@@ -2,9 +2,10 @@ package AOJ;
 
 import java.io.PrintWriter;
 import java.util.Scanner;
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class P1176ÊÖ»úö¦ºÅ {
+public class P1176æ‰‹æœºé“å· {
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);

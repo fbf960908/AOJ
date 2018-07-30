@@ -2,7 +2,7 @@ package AOJ;
 
 import java.util.Scanner;
  
-public class P1454¹Ø¼ü´ÊÍ³¼Æ {
+public class P1454å…³é”®è¯ç»Ÿè®¡ {
  
     static Scanner cin = new Scanner(System.in);
  
@@ -17,9 +17,10 @@ public class P1454¹Ø¼ü´ÊÍ³¼Æ {
         String[] s = str.split("\\.\\s*|\\s+|\\W+\\s*");
         int ans = 0;
         for (int i = 0; i < N; i++) {
-            for (int j = 0; j < s.length; j++) {
-                if (word[i].toLowerCase().equals(s[j].toLowerCase()))
-                    ans++;
+            for (String element : s) {
+                if (word[i].toLowerCase().equals(element.toLowerCase())) {
+					ans++;
+				}
             }
             System.out.println(ans);
             ans = 0;

@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class P1174图书馆占座for贪心 {
+public class P1174鍥句功棣嗗崰搴or璐績 {
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
@@ -51,6 +51,7 @@ public class P1174图书馆占座for贪心 {
 			this.end = end;
 		}
 
+		@Override
 		public int compareTo(Student o) {
 			Integer thisend = this.getEnd();
 			Integer thatend = o.getEnd();

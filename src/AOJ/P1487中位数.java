@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class P1487中位数 {
+public class P1487涓綅鏁皗
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
@@ -22,7 +22,7 @@ public class P1487中位数 {
 				System.out.println(str);
 			}
 			else{
-				String str = String.format("%.2f", (double)((ss[(N - 1) / 2] + ss[N / 2]) / 2.0));
+				String str = String.format("%.2f", (ss[(N - 1) / 2] + ss[N / 2]) / 2.0);
 				System.out.println(str);
 			}
 		}

@@ -3,7 +3,7 @@ package AOJ;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class P1451幸运数字 {
+public class P1451骞歌繍鏁板瓧{
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
@@ -21,10 +21,11 @@ public class P1451幸运数字 {
 					break;
 				}
 			}
-			if (s % sum == 0)
+			if (s % sum == 0) {
 				System.out.println("yes");
-			else
+			} else {
 				System.out.println("no");
+			}
 		}
 		cin.close();
 		cout.close();

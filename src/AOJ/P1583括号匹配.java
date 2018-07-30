@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class P1583¿®∫≈∆•≈‰ {
+public class P1583Êã¨Âè∑ÂåπÈÖç {
 
 	static Scanner cin = new Scanner(System.in);
 	static PrintWriter cout = new PrintWriter(System.out);
@@ -19,17 +19,19 @@ public class P1583¿®∫≈∆•≈‰ {
 	}
 
 	private static boolean panduan(String str) {
-		Stack<Character> stack = new Stack<Character>();
+		Stack<Character> stack = new Stack<>();
 		for (char s : str.toCharArray()) {
-			if (s == '(' || s == '{')
+			if (s == '(' || s == '{') {
 				stack.push(s);
-			else if (s == ')') {
-				if (stack.isEmpty() || stack.peek() != '(')
+			} else if (s == ')') {
+				if (stack.isEmpty() || stack.peek() != '(') {
 					return false;
+				}
 				stack.pop();
 			} else if (s == '}') {
-				if (stack.isEmpty() || stack.peek() != '{')
+				if (stack.isEmpty() || stack.peek() != '{') {
 					return false;
+				}
 				stack.pop();
 			}
 		}
